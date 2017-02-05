@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+	
+	<tiles-definitions>
+		
+		<definition name="baseLayout" template="/WEB-INF/tiles/templates/baseLayout.jsp">
+			<put-attribute name="title" value="Tytuł"/>
+			<put-attribute name="heading" value=""/>
+			<put-attribute name="tagline"/>
+			<put-attribute name="navigation" value="/WEB-INF/tiles/templates/navigation.jsp"/>
+			<put-attribute name="content" value=""/>
+			<put-attribute name="footer" value="/WEB-INF/tiles/templates/footer.jsp"/>
+		</definition>
+		
+		<definition name="welcome" extends="baseLayout">
+			<put-attribute name="title" value="Strona Główna"/>
+			<put-attribute name="heading" value="Witaj na stronie głównej"/>
+			<put-attribute name="tagline" value="Wybierz z menu u góry co chcesz zrobić"></put-attribute>
+			<put-attribute name="content" value=""/>
+		</definition>
+		
+		<definition name="showPets" extends="baseLayout">
+			<put-attribute name="title" value="Wykaz zwierząt w klinice"/>
+			<put-attribute name="heading" value="Wykaz zwierząt w klinice"/>
+			<put-attribute name="tagline" value=""></put-attribute>
+			<put-attribute name="content" value="/WEB-INF/views/showPets.jsp"/>
+		</definition>
+		
+		<definition name="showOwners" extends="baseLayout">
+			<put-attribute name="title" value="Wykaz klientów"/>
+			<put-attribute name="heading" value="Wykaz klientów"/>
+			<put-attribute name="tagline" value=""></put-attribute>
+			<put-attribute name="content" value="/WEB-INF/views/showOwners.jsp"/>
+		</definition>
+		
+		<definition name="addPet" extends="baseLayout">
+			<put-attribute name="title" value="Dodaj nowego zwierzaka"/>
+			<put-attribute name="heading" value="Dodaj nowego zwierzaka"/>
+			<put-attribute name="tagline" value="Wpisz dane"/>
+			<put-attribute name="content" value="/WEB-INF/views/addPet.jsp"/>
+		</definition>
+		
+		<definition name="addOwner" extends="baseLayout">
+			<put-attribute name="title" value="Dodawanie nowego klienta"/>
+			<put-attribute name="heading" value="Dodawanie nowego klienta"/>
+			<put-attribute name="tagline" value="Wpisz dane"></put-attribute>
+			<put-attribute name="content" value="/WEB-INF/views/addOwner.jsp"/>
+		</definition>
+		
+		<definition name="editOwner" extends="baseLayout">
+			<put-attribute name="title" value="Edytuj dane klienta"/>
+			<put-attribute name="heading" value="Edytuj dane klienta"/>
+			<put-attribute name="tagline" value="Wpisz nowe dane"></put-attribute>
+			<put-attribute name="content" value="/WEB-INF/views/editOwner.jsp"/>
+		</definition>
+		
+		<definition name="login" extends="baseLayout">
+			<put-attribute name="title" value="Zaloguj się" />
+			<put-attribute name="heading" value="Zaloguj się" />
+			<put-attribute name="tagline" value="Wprowadź nazwę użytkownika i hasło" />
+			<put-attribute name="content" value="/WEB-INF/views/login.jsp" />
+		</definition>
+		
+		<definition name="editPet" extends="baseLayout">
+			<put-attribute name="title" value="Edytuj istniejące zwierze" />
+			<put-attribute name="heading" value="Edytuj istniejące zwierze" />
+			<put-attribute name="tagline" value="Wpisz nowe dane" />
+			<put-attribute name="content" value="/WEB-INF/views/editPet.jsp"/>
+		</definition>
+		
+	</tiles-definitions>
